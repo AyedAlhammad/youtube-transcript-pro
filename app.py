@@ -263,7 +263,7 @@ def get_transcript_with_ytdlp(youtube_url):
             'writesubtitles': True,
             'writeautomaticsub': True,
             'skip_download': True,
-            'subtitleslangs': ['en', 'ar', 'es', 'fr', 'de', 'it', 'pt', 'ru'],
+            'subtitleslangs': ['ar', 'en', 'es', 'fr', 'de', 'it', 'pt', 'ru'],
             'quiet': True,
         }
         
