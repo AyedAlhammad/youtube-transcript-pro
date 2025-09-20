@@ -260,12 +260,17 @@ def get_transcript_with_ytdlp(youtube_url):
         st.info("🔍 استخراج النصوص باستخدام yt-dlp...")
         
         ydl_opts = {
-            'writesubtitles': True,
-            'writeautomaticsub': True,
-            'skip_download': True,
-            'subtitleslangs': ['ar', 'en', 'es', 'fr', 'de', 'it', 'pt', 'ru'],
-            'quiet': True,
-        }
+    'writesubtitles': True,
+    'writeautomaticsub': True,
+    'skip_download': True,
+    'subtitleslangs': ['ar', 'en', 'es', 'fr', 'de', 'it', 'pt', 'ru'],
+    'quiet': True,
+    'extract_flat': False,
+    'no_warnings': False,
+    'ignoreerrors': False,
+    'geo_bypass': True,
+    'user_agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+}
         
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             # استخراج معلومات الفيديو والنصوص
@@ -814,3 +819,4 @@ streamlit run app.py
 
 if __name__ == "__main__":
     main()
+
